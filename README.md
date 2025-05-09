@@ -5,3 +5,4 @@ A minimal test case for libuipc's 3rd party.
 
 - On Windows, some machines will get `Invalid Argument` when calling `cub::DeviceSelect::Flagged(),` which finally throws `CudaErrorInvalidValue`.
   [device_select.cu](./cube_test/device_select.cu)
+  This may be due to `arch` mismatching, so we use `arch=native` to solve it.
